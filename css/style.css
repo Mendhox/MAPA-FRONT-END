@@ -1,0 +1,434 @@
+/* Reset básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+header {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #e67e22;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 1.5rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s;
+    font-weight: 600; /* Negrito para o menu */
+    letter-spacing: 0.5px;
+}
+
+.menu a:hover {
+    color: #e67e22;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+}
+
+.hero {
+    background: linear-gradient(120deg, #e67e22 60%, #fff 100%);
+    color: #fff;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.hero .btn {
+    background: #fff;
+    color: #e67e22;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.4s cubic-bezier(.4,0,.2,1), color 0.3s cubic-bezier(.4,0,.2,1);
+    display: inline-block;
+}
+
+.hero .btn span {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.hero .btn:hover {
+    background: #d35400;
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero .btn:hover span {
+    transform: scale(1.07);
+}
+
+.hero-btn {
+    margin-top: 2rem;
+}
+
+.benefits {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.benefits h2 {
+    color: #e67e22;
+    margin-bottom: 1rem;
+}
+
+.benefits ul {
+    list-style: disc inside;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #e67e22;
+    color: #fff;
+    margin-top: 2rem;
+    flex-shrink: 0;
+}
+
+.dog-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.dog-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 1rem;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    border: 2px solid transparent;
+    box-sizing: border-box; /* Garante que o border não aumente o tamanho */
+}
+.dog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: block;
+}
+.dog-card.highlight,
+.dog-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(230,126,34,0.15);
+    border-color: #e67e22; /* <-- Só muda a cor do border */
+}
+
+/* Estilo para o formulário de contato */
+#contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contato-form label {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    color: #e67e22;
+    display: block;
+}
+
+#contato-form input,
+#contato-form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    margin-top: 0.2rem;
+    resize: vertical;
+}
+
+#contato-form textarea {
+    min-height: 80px;
+}
+
+#contato-form button,
+#contato-form input[type="submit"] {
+    background: #e67e22;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 0.7rem 2rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 0.5rem;
+    align-self: flex-end;
+}
+
+#contato-form button:hover,
+#contato-form input[type="submit"]:hover {
+    background: #d35400;
+    transform: scale(1.06);
+}
+
+/* Mensagem de validação */
+#form-msg {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.link-contato {
+    color: #e67e22;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.link-contato:hover {
+    color: #d35400;
+    text-decoration: underline;
+}
+
+/* Estilo do Carrossel */
+.carousel-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.carousel-content {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    max-height: 90vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-content img {
+    max-width: 420px;
+    max-height: 55vh;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    object-fit: contain;
+}
+
+.carousel-arrow {
+    background: #e67e22;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.carousel-arrow:hover {
+    background: #d35400;
+}
+
+.carousel-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: transparent;
+    color: #e67e22;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.2s;
+    padding: 0;
+}
+
+.carousel-close .close-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #e67e22;
+    letter-spacing: 0.5px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 8px;
+    padding: 2px 10px;    
+}
+
+.carousel-close:hover .close-text {
+    color: #d35400;
+    text-decoration: underline;
+}
+
+/* Desktop: mantém o botão mais afastado e sem fundo */
+@media (min-width: 601px) {
+    .carousel-close {
+        top: 18px;
+        right: 28px;
+        font-size: 1rem;
+    }
+    .carousel-close .close-text {
+        background: transparent;
+        padding: 2px 0;
+    }
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 600px) {
+    .carousel-close {
+        top: 10px;
+        right: 16px;
+        font-size: 0.95rem;
+        padding-left: 4px;
+    }
+    .carousel-close .close-text {
+        padding: 2px 10px 2px 10px;
+        font-size: 1rem;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+    .menu li {
+        margin: 1rem 0;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .menu.active {
+        display: flex;
+    }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 900px) {
+    .carousel-content {
+        max-width: 90vw;
+    }
+    .carousel-content img {
+        max-width: 70vw;
+    }
+}
+@media (max-width: 600px) {
+    .carousel-content {
+        flex-direction: column;
+        padding: 1rem 0.5rem 1.5rem 0.5rem;
+        max-width: 98vw;
+        max-height: 95vh;
+    }
+    .carousel-content img {
+        max-width: 90vw;
+        max-height: 40vh;
+    }
+    .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+        width: 38px;
+        height: 38px;
+        font-size: 1.3rem;
+    }
+    .carousel-arrow.left {
+        left: 8px;
+    }
+    .carousel-arrow.right {
+        right: 8px;
+    }
+    .carousel-close {
+        top: 8px;
+        right: 12px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Garante que as setas fiquem visíveis mesmo em telas muito pequenas */
+@media (max-width: 400px) {
+    .carousel-content img {
+        max-width: 96vw;
+        max-height: 30vh;
+    }
+    .carousel-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 1.1rem;
+    }
+    .carousel-close {
+        font-size: 0.9rem;
+    }
+}
